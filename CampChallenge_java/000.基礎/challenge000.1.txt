@@ -1,0 +1,8 @@
+自分のパソコンのスペックについては、
+MacBook Pro(Retina, 13-inch,Early2015)のタイプのパソコンです。
+プロセッサは2.7GHz Intel Core i5 です。
+メモリは 8GB 1867MHz DDR3 というスッペクです。
+グラフィックスは　Intel Iris Graphics 6100 1536 MB というタイプです。
+ディスプレイは内臓の13.3インチ(2560*1600) Intel Iris Graphics 6100 1536 MB というタイプのディスプレイです。
+ハードディスクは　256GB SSDストレージのスッペクです。
+OSは現在の最新バージョン macOS Sierra バージョン10.12.5のです。
