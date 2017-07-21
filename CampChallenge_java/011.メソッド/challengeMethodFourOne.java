@@ -31,33 +31,38 @@ public class challengeMethodFourOne extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    String[][] peopleprofile(){
-        String[] pf1={"1","田中","1994-04-13","東京都江戸川区平井1-39-5"};
-        String[] pf2={"2","藤本","1988-11-19","東京都江戸川区小岩2-19-8"};
-        String[] pf3={"3","木村","1992-07-22","東京都江戸川区亀戸1-9-3"};
-        String[][] pf={pf1,pf2,pf3};
-        return pf;
+    String[] peopleprof(int id){
+    
+        
+        String p[]=new String[4];
+        switch(id){
+        case 1:
+            String[] pf1={"1","田中","1994-04-13","東京都江戸川区平井1-39-5"};
+            p=pf1;
+            break;
+            case 2:
+            String[] pf2={"2","藤本","1988-11-19","東京都江戸川区小岩2-19-8"};
+            p=pf2;
+            break;
+        case 3:
+            String[] pf3={"3","木村","1992-07-22","東京都江戸川区亀戸1-9-3"};
+            p=pf3;
+            break;
+        }
+        return p;
     }
+    
+    
+    
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        int id=2;
-        switch(id){
-            case 1:
-                out.println("名前:"+peopleprofile()[0][1]+"<br>"+"生年月日:"+peopleprofile()[0][2]
-                        +"<br>"+"住所:"+peopleprofile()[0][3]+"<br>");
-                break;
-            case 2:
-                out.println("名前:"+peopleprofile()[1][1]+"<br>"+"生年月日:"+peopleprofile()[1][2]
-                        +"<br>"+"住所:"+peopleprofile()[1][3]+"<br>");
-                break;
-            case 3:
-                out.println("名前:"+peopleprofile()[2][1]+"<br>"+"生年月日:"+peopleprofile()[2][2]
-                        +"<br>"+"住所:"+peopleprofile()[2][3]+"<br>");
-                break;
-        }
+        
+        out.print("名前:"+peopleprof(1)[1]+"<br>"+"生年月日:"+peopleprof(1)[2]+"<br>"+"住所:"+peopleprof(1)[3]+"<br>");
+        out.print("名前:"+peopleprof(2)[1]+"<br>"+"生年月日:"+peopleprof(2)[2]+"<br>"+"住所:"+peopleprof(2)[3]+"<br>");
+        out.print("名前:"+peopleprof(3)[1]+"<br>"+"生年月日:"+peopleprof(3)[2]+"<br>"+"住所:"+peopleprof(3)[3]+"<br>");
         
             
     }
