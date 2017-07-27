@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package Challenge015;
+import java.util.Date;
 import java.util.Calendar;
+import java.text.SimpleDateFormat;
 
 /**
  * 現在の日時の表示
@@ -13,11 +15,15 @@ import java.util.Calendar;
  */
 public class Challenge01502 {
     public static void main(String []args){
-        Calendar td=Calendar.getInstance();
-       
-        System.out.print(td.get(Calendar.YEAR)+"-"+td.get(Calendar.MONTH)+"-"+
-        td.get(Calendar.DAY_OF_MONTH)+" "+td.get(Calendar.HOUR_OF_DAY)+":"+
-        td.get(Calendar.MINUTE)+":"+td.get(Calendar.SECOND));
+        Date now =new Date();
+        
+        /*Calendar td=Calendar.getInstance();
+         *System.out.print(td.get(Calendar.YEAR)+"-"+td.get(Calendar.MONTH)+"-"+
+         *td.get(Calendar.DAY_OF_MONTH)+" "+td.get(Calendar.HOUR_OF_DAY)+":"+
+         *td.get(Calendar.MINUTE)+":"+td.get(Calendar.SECOND));
+         */
+        SimpleDateFormat sdf =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.print(sdf.format(now));
     }
     
 }
