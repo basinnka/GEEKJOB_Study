@@ -18,7 +18,7 @@ import java.text.SimpleDateFormat;
 public class Challenge01503 {
     public static void main(String []args){
         Calendar c =Calendar.getInstance();
-        c.set(2016,11,4,10,0,0);
+        c.set(2016,10,4,10,0,0);
         Date d =new Date(c.getTimeInMillis());
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.print(sdf.format(d));
