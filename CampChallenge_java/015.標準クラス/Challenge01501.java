@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Challenge015;
+import java.util.Date;
 import java.util.Calendar;
 
 /**
@@ -14,10 +15,22 @@ import java.util.Calendar;
 public class Challenge01501 {
     public static void main (String [] args){
         Calendar c =Calendar.getInstance();
-        c.set(2016,01,01,00,00,00);
-        System.out.print(c.get(Calendar.YEAR)+"-"+c.get(Calendar.MONTH)+"-"+
-         c.get(Calendar.DAY_OF_MONTH)+" "+c.get(Calendar.HOUR_OF_DAY)+":"+
-         c.get(Calendar.MINUTE)+":"+c.get(Calendar.SECOND));
+        c.set(2016,0,1,00,00,00);
+        Date a =c.getTime();
         
+        System.out.println(a);
+        
+        /**
+        * // カレンダーで特定の日付を作成1
+        * // 今回は、2017/1/1
+        * Calendar c1 = Calendar.getInstance();
+        * c.set(2017, 0, 1);
+        *
+        * // カレンダーからタイムスタンプ(Long)を取得し、Dateに適用
+        * // これにより、Dateの内部は2017/1/1に
+        * Date d = new Date(c1.getTimeInMillis());
+        *
+        * System.out.print(d);
+        */
     }
 }
