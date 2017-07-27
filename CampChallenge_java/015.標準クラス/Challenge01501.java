@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Challenge015;
-import java.util.Date;
+import java.util.Calendar;
 
 /**
  * タイムスタンプの作成
@@ -13,8 +13,11 @@ import java.util.Date;
  */
 public class Challenge01501 {
     public static void main (String [] args){
-        Date td = new Date("2016/01/01 00:00:00");
-        System.out.print(td);
+        Calendar c =Calendar.getInstance();
+        c.set(2016,01,01,00,00,00);
+        System.out.print(c.get(Calendar.YEAR)+"-"+c.get(Calendar.MONTH)+"-"+
+         c.get(Calendar.DAY_OF_MONTH)+" "+c.get(Calendar.HOUR_OF_DAY)+":"+
+         c.get(Calendar.MINUTE)+":"+c.get(Calendar.SECOND));
         
     }
 }
