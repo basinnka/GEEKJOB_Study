@@ -12,35 +12,40 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>入力フィールド</title>
     </head>
     <body>
-      <form action="./test.jsp" method="post">
+      <form action="./outputchallenge01601.jsp" method="post">
       <!-- formタグで括られた入力項目はこれら -->
       <%
           out.print("名前:");
       %>
       <!--テキストボックス-->
-      <input type="text" name="txtName">
+      <!--requiredは入力が必須の場合に使用する-->
+      <input type="text" name="txtName" required>
       <%
           out.print("<br>"+"性別:");
       %>
+      
       <!--ラジオボタン-->
-      <input type="radio" name="rdoSample">
-      <%
-          out.print("男性");
-      %>
+      <input type="radio" name="rdoSample" value="男性" required>男性
+      
       <!--ラジオボタン-->
-      <input type="radio" name="rdoSample">
+      <input type="radio" name="rdoSample" value="女性" required>女性
+      
+      
       <%
-          out.print("女性"+"<br>");
-      %>
-      <%
-          out.print("趣味:"+"<br>");
+          out.print("<br>"+"趣味:"+"<br>");
       %>
       <!--複数行テキストボックス-->
-      <textarea name="mulText"></textarea>
+      <textarea name="mulText" required></textarea>
+      <%
+          out.print("<br>"+"<br>");
+      %>
+      <!--送信ボタン　-->
+      <input type="submit" name="btnSubmit">
       </form>
+      
         
     </body>
 </html>
